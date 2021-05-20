@@ -1,0 +1,44 @@
+{
+  "name": "paga/paga-collect",
+  "description": "This document lists the different RESTful web services Paga offers allowing anyone (payment request initiator) to initiate a payment request to a third party and automatically get notified when the payment request is fulfilled",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/Paga-Developer-Community/paga-collect-php-lib",
+  "version": "v1.0.0",
+  "keywords": ["Paga", "paga-collect", "payment"],
+  "authors": [
+      {
+          "name": "pagadevcomm",
+          "email": "pagadevcomm@paga.com"
+      },
+      {
+          "name": "Nwabuokei Nnamdi",
+          "email": "nnwabuokei@paga.com",
+          "role": "Software Engineer"
+
+      }
+  ],
+  "support": {
+      "issues": "https://github.com/pagadevcomm/paga-business-library-php/issues"
+  },
+  
+  "minimum-stability": "dev",
+  "config": {
+      "platform": {
+          "php": "7.2.29"
+      },
+      "optimize-autoloader": true,
+      "sort-packages": true
+  },
+  "require": {
+    "php": ">=5.3.3",
+    "monolog/monolog": "2.x-dev",
+    "php-console/php-console": "dev-master"
+  },
+  "autoload": {
+      "psr-4": {
+          "PagaCollect\\":"src/PagaCollect"
+      }
+  }
+
+}

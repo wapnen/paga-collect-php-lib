@@ -95,6 +95,14 @@ $data = [
 $paymentStatus = $collectAPI ->paymentHistory($data);
 ```
 
+# Changelog
+
+## [1.0.0] - 2021-05-20
+
+### Added
+
+- Implemented endpoints for paga-collect
+
 ![Packagist Downloads](https://img.shields.io/packagist/dm/paga/paga-business?style=plastic)
 ![Packagist License](https://img.shields.io/packagist/l/paga/paga-business?style=plastic)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/paga/paga-business?style=plastic)

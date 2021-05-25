@@ -109,3 +109,4 @@ $paymentStatus = $collectAPI ->paymentHistory($data);
 ### Bug fix
 
 - Updated dependecies
+- Removed php-console dependencies

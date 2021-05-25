@@ -1,4 +1,4 @@
-# Paga Collect PHP API Library v1.0.0
+# Paga Collect PHP API Library v1.0.1
 
 ## Business Services exposed by the library
 
@@ -102,3 +102,10 @@ $paymentStatus = $collectAPI ->paymentHistory($data);
 ### Added
 
 - Implemented endpoints for paga-collect
+
+
+## [1.0.1] - 2021-05-25
+
+### Bug fix
+
+- Updated dependecies

@@ -32,7 +32,7 @@
   },
   "require": {
     "php": ">=5.3.3",
-    "monolog/monolog": "2.x-dev",
+    "monolog/monolog": "^2.0@dev",
     "php-console/php-console": "dev-master"
   },
   "autoload": {

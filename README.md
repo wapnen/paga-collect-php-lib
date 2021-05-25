@@ -106,6 +106,6 @@ $paymentStatus = $collectAPI ->paymentHistory($data);
 
 ## [1.0.1] - 2021-05-25
 
-### Added
+### Bug fix
 
 - Updated dependecies

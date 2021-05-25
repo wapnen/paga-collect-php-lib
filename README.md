@@ -1,4 +1,4 @@
-# Paga Collect PHP API Library v1.0.2
+# Paga Collect PHP API Library v1.0.1
 
 ## Business Services exposed by the library
 

@@ -4,7 +4,7 @@
   "type": "library",
   "license": "MIT",
   "homepage": "https://github.com/Paga-Developer-Community/paga-collect-php-lib",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "keywords": ["Paga", "paga-collect", "payment"],
   "authors": [
       {

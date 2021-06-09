@@ -206,6 +206,60 @@ class PagaCollectClient
     }
 
 
+      /**
+       * Register Persistent Payment Account function
+       *
+       * @param array $data Register Persistent Payment request
+       * 
+       * @return JSON Object with List of Banks integrated with paga
+       * 
+       * 
+       */
+    public function registerPersistentPaymentAccount($data)
+    {
+        try {
+              $server = ($this->test) ? $this->test_server : $this->live_server;
+              $url = $server."registerPersistentPaymentAccount";
+              $data['creditBankId'] ??= null;
+              $data['creditBankAccountNumber'] ??= null;
+              $data['callbackUrl'] ??= null;
+              extract($data);
+              var_dump($data);
+              
+              $request_data = [
+                  'referenceNumber'=>$referenceNumber,
+                  'phoneNumber'=>$phoneNumber,
+                  'firstName'=>$firstName, 
+                  'lastName'=>$lastName,
+                  'accountName'=>$accountName, 
+                  'financialIdentificationNumber'=>$financialIdentificationNumber,
+                  'accountReference'=>$accountReference,
+                  'creditBankId' =>$creditBankId,
+                  'creditBankAccountNumber' => $creditBankAccountNumber,
+                  'callbackUrl' => $callbackUrl
+              ];
+  
+              $hash_params= array(
+                  $referenceNumber,
+                  $accountReference,
+                  $financialIdentificationNumber,
+                  $creditBankId,
+                  $creditBankAccountNumber,
+                  $callbackUrl
+                          
+              );
+  
+              $hash = $this->createHash(array_filter($hash_params));
+              $curl = $this->buildRequest($url, $hash, array_filter($request_data));
+              $response = curl_exec($curl);
+              $this->checkCURL($curl, json_decode($response, true));
+              return $response;
+        } catch (Exception $e) {
+              return $e->getMessage();
+        }
+    }
+
+
     /**
      * Payment Request History function
      *

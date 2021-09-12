@@ -120,7 +120,6 @@ class PagaCollectClient
         foreach ($data as $key => $value) {
             $hash .= $value;
         }
-        echo $hash;
         $hash=$hash.$this->apiKey;
         $hash = hash('sha512', $hash);
 
@@ -223,7 +222,6 @@ class PagaCollectClient
               $data['creditBankAccountNumber'] ??= null;
               $data['callbackUrl'] ??= null;
               extract($data);
-              var_dump($data);
               
               $request_data = [
                   'referenceNumber'=>$referenceNumber,

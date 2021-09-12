@@ -98,7 +98,6 @@ class PagaCollectClient
 
         if ($data != null) {
             $data_string = json_encode($data);
-            print_r($data_string);
 
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
         }
@@ -308,7 +307,6 @@ class PagaCollectClient
             $hash = $this->createHash($request_data);
             $curl = $this->buildRequest($url, $hash, $request_data);
   
-            //   print_r($url);
             $response = curl_exec($curl);
             $this->checkCURL($curl, json_decode($response, true));
             return $response;
